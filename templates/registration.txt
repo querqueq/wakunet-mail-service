@@ -1,0 +1,7 @@
+Sie wurden zum Wakunet eingeladen.
+
+Melden Sie sich <a href="$url">hier</a> an mit folgenden Login-Daten:
+
+Username: $username
+Passwort: $password
+

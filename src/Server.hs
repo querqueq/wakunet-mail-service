@@ -57,6 +57,7 @@ sendEmail (Mail {..}) = do
 context :: M.Map T.Text T.Text -> ContextA Maybe
 context m = (\key -> M.lookup key m)
 
+-- TODO get username and password from env
 sendWakuGmail to subject body = sendGmail 
     "wakunet.dev@gmail.com" 
     "wakunet!" 
