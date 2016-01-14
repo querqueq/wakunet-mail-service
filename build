@@ -1,0 +1,5 @@
+cabal update
+cabal install --only-dependencies
+cabal configure
+cabal build
+cp -f dist/build/waku-mail-service/waku-mail-service bin/waku-mail-service_x86_64
