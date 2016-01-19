@@ -68,4 +68,4 @@ sendWakuGmail to subject body = sendGmail
     (T.pack subject)
     body
     [] 
-    1000000
+    5000000
