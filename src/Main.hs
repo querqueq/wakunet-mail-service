@@ -5,7 +5,7 @@ import System.Environment          (lookupEnv)
 
 import Config (defaultConfig, Config(..), Environment(..), setLogger)
 import Server   (app)
-import API      (mailAPI)
+import Waku.APIs.MailAPI      (mailAPI)
 import Servant.Docs
 
 main :: IO ()

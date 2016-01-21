@@ -10,15 +10,10 @@
 module Server where
 
 import Control.Applicative          ((<$>))
---import Control.Monad                (mapM,mapM_,(>=>))
 import Control.Monad.IO.Class       (MonadIO, liftIO)
 import Control.Monad.Trans.Either   (EitherT, left, right, runEitherT, hoistEither)
 import Network.Wai                  (Application)
---import Data.Either.Combinators      (rightToMaybe)
---import Data.Maybe                   (fromJust, maybe)
 
---import Config    (Config(..))
---
 
 import Network.Mail.Client.Gmail
 import Network.Mail.Mime            (Address(..))
@@ -28,9 +23,9 @@ import Data.Text.Template
 import Data.Either.Utils            (maybeToEither)
 import qualified Data.Map as M
 import Servant
-import API
+import Waku.APIs.MailAPI
 import Templates
-import Models
+import Waku.Models.Mail
 
 app :: Application
 app = serve mailAPI server
