@@ -1,6 +1,7 @@
-Hallo $receiver,
+Hallo,
 
-Sie wurden von $inviter zur $contentType eingeladen. Klicken Sie auf $url um die Einladung anzunehmen.
+Sie wurden eingeladen zu $thing. Mit folgedem Link können Sie die Einladung annehmen:
+$url
 
 Viele Grüße,
 Wakunet-Team
