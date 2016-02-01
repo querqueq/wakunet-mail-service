@@ -7,6 +7,7 @@ import Config (defaultConfig, Config(..), Environment(..), setLogger)
 import Server   (app)
 import Waku.APIs.MailAPI      (mailAPI)
 import Servant.Docs
+import Waku.APIs.Util
 
 main :: IO ()
 main = do

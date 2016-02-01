@@ -27,6 +27,8 @@ import Waku.APIs.MailAPI
 import Templates
 import Waku.Models.Mail
 
+import Debug.Trace
+
 app :: Application
 app = serve mailAPI server
 
@@ -41,7 +43,7 @@ sendEmail (Mail {..}) = do
     case M.lookup mailTemplate templates of 
         Nothing -> left $ err404
         (Just t) -> do
-            case renderA t (context mailTransactionalData) of
+            case renderA t (context $ traceShowId mailTransactionalData) of
                 Nothing -> undefined
                 (Just body) -> do
                     liftIO $ sendWakuGmail mailTo mailSubject body
